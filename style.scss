@@ -70,10 +70,14 @@ body {
   border-radius: 2px;
   padding: 1rem 3rem;
   cursor: pointer;
-  &.active {
+
+  &:active {
     transform: scale(.98);
   }
+
 }
+
+
 
 .fa-heart {
   color: red;
