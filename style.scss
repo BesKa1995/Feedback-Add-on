@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+html {
+  font-size: 0.625rem;
+}
+
+body {
+  background-color: #fef9f2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-weight: 100;
+}
+
+.panel-container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  border-radius: 4px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  max-width: 40rem;
+
+  strong {
+    line-height: 20px;
+
+  }
+}
+
+.ratings-container {
+  text-align: center;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.rating {
+  flex: 1;
+  padding: 2rem;
+  cursor: pointer;
+  margin: 1rem .5rem;
+
+  & small {
+    display: inline-block;
+    color: #555;
+    margin-top: 1rem;
+  }
+
+  &:hover,
+  &.active {
+    border-radius: .4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  }
+
+  &:hover small,
+  &.active small {
+    color: #111;
+  }
+}
+
+.btn {
+  background-color: #302d2b;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  &.active {
+    transform: scale(.98);
+  }
+}
+
+.fa-heart {
+  color: red;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
