@@ -5,13 +5,13 @@ const sendBtn = document.getElementById('send')
 let selectedRating = 'Satisfied'
 ratingsContainer.addEventListener('click', (e) => {
   if (e.target.parentNode.classList.contains('rating')) {
+    console.log('test')
     removeActive()
     e.target.parentNode.classList.add('active')
     selectedRating = e.target.nextElementSibling.innerHTML
   } else if (e.target.classList.contains('rating')) {
     removeActive()
-    selectedRating = e.target.nextElementSibling.innerHTML
-
+    selectedRating = e.target.children[1].innerHTML
     e.target.classList.add('active')
   }
 })
@@ -22,8 +22,6 @@ sendBtn.addEventListener('click', () => {
     <strong>Thank You!</strong>
     <strong>FeedBack: ${selectedRating}</strong>
     <p>We'll use your feedback to improve <br> our customer support
-
-
   `
 })
 
