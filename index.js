@@ -2,7 +2,7 @@ const panel = document.getElementById('panel')
 const ratingsContainer = document.querySelector('.ratings-container')
 const ratings = document.querySelectorAll('.rating')
 const sendBtn = document.getElementById('send')
-const selectedRating = 'Satisfied'
+let selectedRating = 'Satisfied'
 ratingsContainer.addEventListener('click', (e) => {
   if (e.target.parentNode.classList.contains('rating')) {
     removeActive()
@@ -10,6 +10,8 @@ ratingsContainer.addEventListener('click', (e) => {
     selectedRating = e.target.nextElementSibling.innerHTML
   } else if (e.target.classList.contains('rating')) {
     removeActive()
+    selectedRating = e.target.nextElementSibling.innerHTML
+
     e.target.classList.add('active')
   }
 })
